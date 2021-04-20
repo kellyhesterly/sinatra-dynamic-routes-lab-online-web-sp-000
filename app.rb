@@ -27,7 +27,7 @@ class App < Sinatra::Base
       @add = params[:number1].to_i + params[:number2].to_i
       "#{@add}"
     elsif params[:operation] == "subract"
-      @subtract = params[:number1].to_i - params[:number2].to_i
+      @subtract = params[:number2].to_i - params[:number1].to_i
       "#{@subtract}"
     elsif params[:operation] == "multiply"
       @multiply = params[:number1].to_i * params[:number2].to_i
