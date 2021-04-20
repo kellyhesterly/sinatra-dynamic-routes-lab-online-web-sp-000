@@ -33,7 +33,7 @@ class App < Sinatra::Base
       @multiply = params[:number1].to_i * params[:number2].to_i
       "#{@multiply}"
     else
-      @divide = (params[:number1].to_i) % (params[:number2].to_i)
+      @divide = params[:number1].to_i / params[:number2].to_i
       "#{@divide}"
     end
   end
