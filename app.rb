@@ -11,6 +11,5 @@ class App < Sinatra::Base
     @number = params[:number]
     square_number = @number.to_i * @number.to_i
     "#{square_number}"
-    binding.pry
   end
 end
