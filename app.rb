@@ -27,7 +27,6 @@ class App < Sinatra::Base
       @add = params[:number1].to_i + params[:number2].to_i
       "#{@add}"
     elsif params[:operation] == "subtract"
-      binding.pry
       @subtract = params[:number1].to_i - params[:number2].to_i
       "#{@subtract}"
     elsif params[:operation] == "multiply"
@@ -35,6 +34,7 @@ class App < Sinatra::Base
       "#{@multiply}"
     else
       @divide = params[:number1].to_i & params[:number2].to_i
+      binding.pry
       "#{@divide}"
     end
   end
