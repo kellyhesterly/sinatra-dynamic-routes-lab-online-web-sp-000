@@ -20,7 +20,10 @@ class App < Sinatra::Base
 
   get '/say/:word1/:word2/:word3/:word4/:word5' do
     @say = [params[:word1], params[:word2], params[:word3], params[:word4], params[:word5]]
-    @say.tap {|word| word.split(", ")}
+    @say.tap do |word| 
+      binding.pry
+      word.split(", ")
     binding.pry
+  end
   end
 end
